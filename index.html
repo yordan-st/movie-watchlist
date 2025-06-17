@@ -10,14 +10,39 @@
 </head>
 <body>
     <header>
-        <h1>Find your film</h1>
-        <a href="">My Watchlist</a>
-        <input type="search" placeholder="test">
+        <div class="container">
+            <h1>Find your film</h1>
+            <a href="">My Watchlist</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </div>
     </header>
     <main>
-        <div>
-            <img src="" alt="">
-            <p>Start exploring</p>
+        <div class="container">
+            <article class="card">
+                <img src="/img/placeholder.png" alt="Official movie poster of Blade Runner" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">
+                        Blade Runner
+                        <span class="rating">
+                            <img src="/img/star.svg" alt="Star Icon"> <span aria-label="Rated 8.1 out of 10">8.1</span>
+                        </span>
+                    </h2>
+                    <p class="card-details">
+                        <span aria-label="Runtime: 116 minutes">116 min</span> &bull;
+                        <span aria-label="Genres: Drama, Mystery, Science Fiction">Drama, Mystery, Sci-fi</span>
+                    </p>
+                    <p class="card-description">
+                        A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.
+                    </p>
+                    <button class="watchlist-btn" aria-label="Add Blade Runner to your watchlist">
+                        <img src="/img/plus.svg" alt="Watchlist Icon">
+                        Watchlist
+                    </button>
+                </div>
+            </article>
         </div>
     </main>
 </body>
