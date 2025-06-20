@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/index.css">
-    <title>Simple Page</title>
-    <style>
-    </style>
+    <script defer src="index.js"></script>
+    <title>Movie Watchlist</title>
 </head>
 <body>
     <header>
@@ -15,37 +14,16 @@
             <a href="">My Watchlist</a>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search...">
-                <button>Search</button>
+                <button id="searchBtn">Search</button>
             </div>
         </div>
     </header>
     <main>
-        <div class="container">
-            <article class="card">
-                <img src="/img/placeholder.png" alt="Official movie poster of Blade Runner" class="card-img">
-                <div class="card-content">
-                    <h2 class="card-title">
-                        Blade Runner
-                        <span class="rating">
-                            <img src="/img/star.svg" alt="Star Icon"> <span aria-label="Rated 8.1 out of 10">8.1</span>
-                        </span>
-                    </h2>
-                    <p class="card-details">
-                        <span aria-label="Runtime: 116 minutes">116 min</span> &bull;
-                        <span aria-label="Genres: Drama, Mystery, Science Fiction">Drama, Mystery, Sci-fi</span>
-                    </p>
-                    <p class="card-description">
-                        A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.
-                    </p>
-                    <button class="watchlist-btn" aria-label="Add Blade Runner to your watchlist">
-                        <img src="/img/plus.svg" alt="Watchlist Icon">
-                        Watchlist
-                    </button>
-                </div>
-            </article>
+        <div id="searchQueryEl"></div>
+        <div class="container" id="movieGrid">
             <div role="status" aria-live="polite" class="empty-state">
                 <img src="/img/movie-icn.svg" alt="No movies found" class="empty-state-icon">
-                <p class="empty-state-text">Search for movies to see results</p>
+                <p class="empty-state-text" id="empty-state-text">Search for movies to see results</p>
             </div>
         </div>
     </main>
