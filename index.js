@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 async function handleSearch() {
     const apiKey = '4378420d'
-    const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInpt.value}`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInpt.value}`)
     const data = await res.json()
 
     if (data.Response === 'True') {
@@ -30,7 +30,9 @@ async function handleSearch() {
     } else {
         console.log("No movies found.")
     }
-    localStorage.setItem('movies', JSON.stringify(movieArr))
+    if(movieArr.length > 0) {
+        localStorage.setItem('movies', JSON.stringify(movieArr))
+    }
     renderMovies()
 }
 
