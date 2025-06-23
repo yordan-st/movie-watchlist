@@ -20,6 +20,16 @@ p {
     font-size: 1rem;
 }
 
+.truncated-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100%;
+    width: 100%;
+}
+
 body {
     background-color: #121212;
 }
@@ -80,28 +90,35 @@ header .container {
 
 main .container {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
 
 .card {
     display: flex;
+    align-items: center;
     border-bottom: 1px solid #2C2C2C;
     overflow: hidden;
-    width: 100%;
-    padding-bottom: 20px;
-    height: 250px;
+    max-width: 500px;
+    padding: 20px 0;
 }
 
 .card-img {
-    width: auto;
     flex-grow: 1;
-    height: 100%;
+    width: 40%;
     object-fit: contain;
     border-radius: 3px;
 }
 
 
 .card-content {
-    padding: 12px;
+    padding: 0 12px;
+    width: 60%;
+    height: fit-content;
 }
 
 .card-title {
@@ -150,4 +167,21 @@ main .container {
     width: 16px;
     height: 16px;
     margin-right: 10px;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 175px;
+    text-align: center;
+    color: #2E2E2F;
+}
+.empty-state-text {
+    color: #2E2E2F;
+    font-weight: 600;
+}
+#searchQueryEl {
+    text-align: center;
 }
